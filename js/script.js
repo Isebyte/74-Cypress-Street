@@ -33,7 +33,7 @@ monogatari.action ('canvas').objects ({
 
 // Credits of the people involved in the creation of this awesome game
 monogatari.configuration ('credits', {
-
+	"Developers": "Ise"
 });
 
 

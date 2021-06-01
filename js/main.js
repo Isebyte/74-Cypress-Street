@@ -27,6 +27,18 @@ const { $_ready, $_ } = Monogatari;
 
 // 1. Outside the $_ready function:
 
+/**
+ * ===========================
+ * Titlescreen 
+ * ===========================
+**/
+monogatari.component ('main-screen').template (() => {
+    return `
+		<h1 id="title">Snack Break</h1>
+        <main-menu></main-menu>
+    `;
+});
+
  
 $_ready (() => {
 	// 2. Inside the $_ready function:
