@@ -29,8 +29,8 @@ function createWindow () {
 		title: '',
 
 		// Set the minimal window size
-		minWidth: 640,
-		minHeight: 360,
+		minWidth: 960,
+		minHeight: 540,
 
 
 		// Set the initial window size

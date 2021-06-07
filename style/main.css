@@ -29,10 +29,19 @@
 		 url('../assets/fonts/Raleway-Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
 
+@font-face {
+	font-family: 'Neucha';
+	src: url('../assets/fonts/Neucha-Regular.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		 url('../assets/fonts/Neucha-Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
 
 /* General Style */
 body {
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Neucha', sans-serif;
+	font-size: 1.4rem;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale
 }
 
 /* Simple Button styles*/
@@ -148,12 +157,26 @@ button:hover {
 
 /* Text Box styling */
 [data-component="text-box"] {
-
+	display: block;
+	width: 80%;
+	left: 50%;
+	transform: translate(-50%, 0);
+	padding-left: 5rem;
+	padding-right: 5rem;
+	background-color: rgba(0, 0, 0, 0.7);
+	bottom: 2rem;
+	border-radius: 20px;
+	/* border-style: solid;
+  	border-width: 4px;
+	border-color: rgba(0, 0, 0, 0.9); */
 }
 
 /* Character Name Style */
 [data-ui="who"] {
-
+	font-family: 'Berkshire Swash', sans-serif;
+	margin-top: 0.1rem;
+	text-align: center;
+	/* font-weight: bold; */
 }
 
 /* Style for Centered Text */
@@ -181,22 +204,23 @@ button:hover {
 
 /* Quick Menu Style */
 [data-component="quick-menu"] {
-
+	justify-content: center;
+	height: 1.6rem;
 }
 
 /* Quick Menu Buttons Style */
 [data-component="quick-menu"] span {
-
+	font-size: 0.9rem;
 }
 
 /* Quick Menu Buttons Style on Hover */
 [data-component="quick-menu"] span:hover {
-
+	color: lightgray;
 }
 
 /* Quick Menu Buttons Icon Style */
-[data-component="quick-menu"] > span > .fa {
-
+[data-component="quick-menu"] .svg-inline--fa {
+	font-size: 0.9rem;
 }
 
 /**
