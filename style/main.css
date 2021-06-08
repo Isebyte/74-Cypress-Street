@@ -201,20 +201,21 @@ text-box[data-speaking="hideTextBox"] {
 
 /* Click-To-Continue Icon Stylew */
 .lds-dual-ring {
-	display: none;
-	position: absolute;
+	visibility: hidden;
+	float: right;
 	z-index: 11;
-	left:87vw;
-	top: 89vh;
-	width: 28px;
-	height: 28px;
+	width: 1.1em;
+	height: 1.1em;
 }
 .lds-dual-ring:after {
 	content: " ";
-	display: block;
-	width: 24px;
-	height: 24px;
-	margin: 4px;
+	/* visibility: visible; */
+	position: absolute;
+	z-index: 11;
+    left: 77vw;
+    top: 19vh;
+	width: 1.1em;
+	height: 1.1em;
 	border-radius: 50%;
 	border: 3px solid #fff;
 	border-color: #fff transparent #fff transparent;

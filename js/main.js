@@ -28,6 +28,18 @@ const { $_ready, $_ } = Monogatari;
 // 1. Outside the $_ready function:
 
 /**
+ * Clones the skeleton div for the spinner and appends the clone to the correct 
+ * location (with class attached)
+ */
+function initSpinner() {
+	let ctc = document.getElementById("spinner");
+	let ctcClone =  ctc.cloneNode(true);
+	ctcClone.classList.add('lds-dual-ring');
+	let box = document.getElementById("tb");
+	box.appendChild(ctcClone);
+}
+
+/**
  * ===========================
  * Titlescreen 
  * ===========================
@@ -38,28 +50,31 @@ monogatari.component ('main-screen').template (() => {
         <main-menu></main-menu>
     `;
 });
-
  
 $_ready (() => {
 	// 2. Inside the $_ready function:
 
 	/**
-	 * Animated dialogue blinking cursor. Appears on end of text scroll.
+	 * Animated dialogue blinking spinner. Appears on end of text scroll.
+	 * Shows spinner.
 	 */
 	monogatari.on ('didFinishTyping', () => {
 		// console.log("Text has stopped scrolling");
-		// SomeJavascript that makes a css rule flip so that the blinking cursor becomes visible.
 		let ctc = document.getElementsByClassName("lds-dual-ring")[0];
-		// Todo: Only show if text-box is visible
-		ctc.style.display = "inline-block";
+		ctc.style.visibility = "visible";
 	});
 
+	/**
+	 * Triggers when dialogue text is currently scrolling.
+	 * Hides spinner.
+	 * Todo: replace punctuation/commas with different amounts of whitespace to sim natural talking
+	 */
 	monogatari.on ('willRunAction', ({detail: {action}}) => {
 		if (action instanceof monogatari.action ('Dialog')) {
 			// console.log("Text is scrolling");
 			// A dialog is about to start
 			let ctc = document.getElementsByClassName("lds-dual-ring")[0];
-			ctc.style.display = "none";
+			ctc.style.visibility = "hidden";
 		}
 	});
 
@@ -72,6 +87,6 @@ $_ready (() => {
 
 	monogatari.init ('#monogatari').then (() => {
 		// 3. Inside the init function:
-
+		initSpinner();
 	});
 });
