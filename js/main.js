@@ -43,6 +43,33 @@ monogatari.component ('main-screen').template (() => {
 $_ready (() => {
 	// 2. Inside the $_ready function:
 
+	/**
+	 * Animated dialogue blinking cursor. Appears on end of text scroll.
+	 */
+	monogatari.on ('didFinishTyping', () => {
+		// console.log("Text has stopped scrolling");
+		// SomeJavascript that makes a css rule flip so that the blinking cursor becomes visible.
+		let ctc = document.getElementsByClassName("lds-dual-ring")[0];
+		// Todo: Only show if text-box is visible
+		ctc.style.display = "inline-block";
+	});
+
+	monogatari.on ('willRunAction', ({detail: {action}}) => {
+		if (action instanceof monogatari.action ('Dialog')) {
+			// console.log("Text is scrolling");
+			// A dialog is about to start
+			let ctc = document.getElementsByClassName("lds-dual-ring")[0];
+			ctc.style.display = "none";
+		}
+	});
+
+	// Todo: Endgame shennanigans?
+	// monogatari.on('willRunAction', ({detail: {action}}) => {
+	// 	if (action instanceof monogatari.action ('End')) {
+	// 		// Do Something
+	// 	}
+	// });
+
 	monogatari.init ('#monogatari').then (() => {
 		// 3. Inside the init function:
 

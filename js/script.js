@@ -75,8 +75,12 @@ monogatari.assets ('scenes', {
 
 // Define the Characters
 monogatari.characters ({
+	'hideTextBox': { // hide text box
+		name: "",
+		color: 'rgba(0,0,0,0)'
+	},
 	'???': {
-		name: '&#9830; &nbsp; ??? &nbsp; &#9830;',
+		name: '&#8212; &nbsp; ??? &nbsp; &#8212;',
 		color: 'white'
 	}
 });
@@ -85,7 +89,11 @@ monogatari.script ({
 	// The game starts here.
 	'Start': [
 		'show scene #f7f6f6 with fadeIn',
-		"??? Hey, what are you doing around here? I've never seen you before."
+		"??? Hey, what are you doing around here? I've never seen you before.",
+		"??? What's with that look?   .   .   .   Wait a minute.",
+		"hideTextBox",
+		"A strange person has shown up.",
+		"end"
 	// 	'show notification Welcome',
 	// 	{
 	// 		'Input': {
