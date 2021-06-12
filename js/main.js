@@ -65,7 +65,7 @@ $_ready (() => {
 	});
 
 	/**
-	 * Triggers when dialogue text is currently scrolling.
+	 * Triggers when dialogue text begins/is currently scrolling.
 	 * Hides spinner.
 	 * Todo: replace punctuation/commas with different amounts of whitespace to sim natural talking
 	 */
@@ -88,5 +88,6 @@ $_ready (() => {
 	monogatari.init ('#monogatari').then (() => {
 		// 3. Inside the init function:
 		initSpinner();
+		
 	});
 });
