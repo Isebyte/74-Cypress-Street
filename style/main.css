@@ -164,6 +164,7 @@ button:hover {
 	padding-left: 5rem;
 	padding-right: 5rem;
 	background-color: rgba(0, 0, 0, 0.7);
+	background-image: repeating-linear-gradient(180deg, transparent, transparent 2px, #ffffff07 2px, #ffffff07 4px);
 	bottom: 2rem;
 	border-radius: 20px;
 	/* border-style: solid;

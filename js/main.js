@@ -75,6 +75,8 @@ $_ready (() => {
 			// A dialog is about to start
 			let ctc = document.getElementsByClassName("lds-dual-ring")[0];
 			ctc.style.visibility = "hidden";
+			simNaturalSpeech();
+			
 		}
 	});
 
@@ -91,3 +93,18 @@ $_ready (() => {
 		
 	});
 });
+
+/**
+ * Adds pauses (spaces) for punctuation 
+ */
+function simNaturalSpeech() {
+	// Get current dialogue text
+	console.log($_('[data-ui="say"]').text());
+	const period = ".                ";
+	const comma = ",           ";
+	const misc = "                  ";
+
+	let text =  $_('[data-ui="say"]').text();
+
+
+}

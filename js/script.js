@@ -1,7 +1,7 @@
 /* global monogatari */
 
 // Define the messages used in the game.
-monogatari.action ('message').messages ({
+monogatari.action('message').messages({
 	'Help': {
 		title: 'Help',
 		subtitle: 'Some useful Links',
@@ -13,7 +13,7 @@ monogatari.action ('message').messages ({
 });
 
 // Define the notifications used in the game
-monogatari.action ('notification').notifications ({
+monogatari.action('notification').notifications({
 	'Welcome': {
 		title: 'Welcome',
 		body: 'This is the Monogatari VN Engine',
@@ -22,59 +22,59 @@ monogatari.action ('notification').notifications ({
 });
 
 // Define the Particles JS Configurations used in the game
-monogatari.action ('particles').particles ({
+monogatari.action('particles').particles({
 
 });
 
 // Define the canvas objects used in the game
-monogatari.action ('canvas').objects ({
+monogatari.action('canvas').objects({
 
 });
 
 // Credits of the people involved in the creation of this awesome game
-monogatari.configuration ('credits', {
+monogatari.configuration('credits', {
 	"Developers": "Ise"
 });
 
 
 // Define the images that will be available on your game's image gallery
-monogatari.assets ('gallery', {
+monogatari.assets('gallery', {
 
 });
 
 // Define the music used in the game.
-monogatari.assets ('music', {
+monogatari.assets('music', {
 
 });
 
 // Define the voice files used in the game.
-monogatari.assets ('voices', {
+monogatari.assets('voices', {
 
 });
 
 // Define the sounds used in the game.
-monogatari.assets ('sounds', {
+monogatari.assets('sounds', {
 
 });
 
 // Define the videos used in the game.
-monogatari.assets ('videos', {
+monogatari.assets('videos', {
 
 });
 
 // Define the images used in the game.
-monogatari.assets ('images', {
+monogatari.assets('images', {
 
 });
 
 // Define the backgrounds for each scene.
-monogatari.assets ('scenes', {
+monogatari.assets('scenes', {
 
 });
 
 
 // Define the Characters
-monogatari.characters ({
+monogatari.characters({
 	'hideTextBox': { // hide text box
 		name: "",
 		color: 'rgba(0,0,0,0)'
@@ -85,71 +85,14 @@ monogatari.characters ({
 	}
 });
 
-monogatari.script ({
+monogatari.script({
 	// The game starts here.
 	'Start': [
 		'show scene #f7f6f6 with fadeIn',
-		"??? Hey, what are you doing around here? I've never seen you before.",
+		"??? Hey, what are you doing around here?   The park is closed for the night.",
 		"??? What's with that look?   .   .   .   Wait a minute.",
 		"hideTextBox",
-		"A strange person has shown up.",
+		"[This person seems familiar for some reason.                Have we met before?]",
 		"end"
-	// 	'show notification Welcome',
-	// 	{
-	// 		'Input': {
-	// 			'Text': 'What is your name?',
-	// 			'Validation': function (input) {
-	// 				return input.trim ().length > 0;
-	// 			},
-	// 			'Save': function (input) {
-	// 				this.storage ({
-	// 					player: {
-	// 						name: input
-	// 					}
-	// 				});
-	// 				return true;
-	// 			},
-	// 			'Revert': function () {
-	// 				this.storage ({
-	// 					player: {
-	// 						name: ''
-	// 					}
-	// 				});
-	// 			},
-	// 			'Warning': 'You must enter a name!'
-	// 		}
-	// 	},
-	// 	'y Hi {{player.name}} Welcome to Monogatari!',
-	// 	{
-	// 		'Choice': {
-	// 			'Dialog': 'y Have you already read some documentation?',
-	// 			'Yes': {
-	// 				'Text': 'Yes',
-	// 				'Do': 'jump Yes'
-	// 			},
-	// 			'No': {
-	// 				'Text': 'No',
-	// 				'Do': 'jump No'
-	// 			}
-	// 		}
-	// 	}
-	// ],
-
-	// 'Yes': [
-	// 	'y Thats awesome!',
-	// 	'y Then you are ready to go ahead and create an amazing Game!',
-	// 	'y I can’t wait to see what story you’ll tell!',
-	// 	'end'
-	// ],
-
-	// 'No': [
-
-	// 	'y You can do it now.',
-
-	// 	'show message Help',
-
-	// 	'y Go ahead and create an amazing Game!',
-	// 	'y I can’t wait to see what story you’ll tell!',
-	// 	'end'
 	]
 });
