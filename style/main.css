@@ -168,8 +168,8 @@ button:hover {
 	bottom: 2rem;
 	border-radius: 20px;
 	/* border-style: solid;
-  	border-width: 4px;
-	border-color: rgba(0, 0, 0, 0.9); */
+  	border-width: 3px;
+	border-color: rgba(255, 255, 255, 0.6); */
 }
 
 /* Character Name Style */
@@ -213,8 +213,8 @@ text-box[data-speaking="hideTextBox"] {
 	/* visibility: visible; */
 	position: absolute;
 	z-index: 11;
-    left: 77vw;
-    top: 19vh;
+    left: 76vw;
+    top: 18vh;
 	width: 1.1em;
 	height: 1.1em;
 	border-radius: 50%;

@@ -90,9 +90,9 @@ monogatari.script({
 	'Start': [
 		'show scene #f7f6f6 with fadeIn',
 		"??? Hey, what are you doing around here?   The park is closed for the night.",
-		"??? What's with that look?   .   .   .   Wait a minute.",
+		"??? What's with that look? . . . Wait a minute.",
 		"hideTextBox",
-		"[This person seems familiar for some reason.                Have we met before?]",
+		"[This person seems familiar for some reason. Have we met before?]",
 		"end"
 	]
 });

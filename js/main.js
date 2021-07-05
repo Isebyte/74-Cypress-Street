@@ -67,16 +67,15 @@ $_ready (() => {
 	/**
 	 * Triggers when dialogue text begins/is currently scrolling.
 	 * Hides spinner.
-	 * Todo: replace punctuation/commas with different amounts of whitespace to sim natural talking
 	 */
 	monogatari.on ('willRunAction', ({detail: {action}}) => {
 		if (action instanceof monogatari.action ('Dialog')) {
+			//console.log(action);
 			// console.log("Text is scrolling");
 			// A dialog is about to start
 			let ctc = document.getElementsByClassName("lds-dual-ring")[0];
 			ctc.style.visibility = "hidden";
-			simNaturalSpeech();
-			
+			action["dialog"] = simNaturalSpeech(action["dialog"]);
 		}
 	});
 
@@ -95,16 +94,23 @@ $_ready (() => {
 });
 
 /**
- * Adds pauses (spaces) for punctuation 
+ * Replaces punctuation/commas with different amounts of whitespace to sim natural talking
  */
-function simNaturalSpeech() {
+function simNaturalSpeech(text) {
 	// Get current dialogue text
-	console.log($_('[data-ui="say"]').text());
-	const period = ".                ";
-	const comma = ",           ";
-	const misc = "                  ";
+	const punct = {
+		"." : ".           ",
+		"!" : "!           ",
+		"?" : "?           ",
+		"," : ",        ",
+	};
 
-	let text =  $_('[data-ui="say"]').text();
-
+	// let text =  $_('[data-ui="say"]').text();
+	let textWithoutLastChar = text.slice(0,-2);
+	for(let key in punct) {
+		textWithoutLastChar = textWithoutLastChar.replaceAll(key, punct[key]);
+	}
+	let completedText = textWithoutLastChar + text.slice(-2);
+	return completedText;
 
 }
