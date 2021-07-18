@@ -1,4 +1,4 @@
-# Snack-Break
+# Vend
 A Visual Novel created using Monogatari.js. 
 
 *Currently under development!*
