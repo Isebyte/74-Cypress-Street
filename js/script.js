@@ -75,7 +75,7 @@ monogatari.assets('scenes', {
 
 // Define the Characters
 monogatari.characters({
-	'hideTextBox': { // hide text box
+	'hideTextBox': { // hide text box - usage: "hideTextBox,"
 		name: "",
 		color: 'rgba(0,0,0,0)'
 	},
@@ -85,14 +85,17 @@ monogatari.characters({
 	}
 });
 
+/**
+ * 
+ * @specialTags
+ * hideTextBox : Hides the textbox until the dialogue is progressed (clicked)
+*/
 monogatari.script({
 	// The game starts here.
 	'Start': [
 		'show scene #f7f6f6 with fadeIn',
-		"??? Hey, what are you doing around here?   The park is closed for the night.",
-		"??? What's with that look? . . . Wait a minute.",
-		"hideTextBox",
-		"[This person seems familiar for some reason. Have we met before?]",
+		"[Another calm, quiet night.]",
+		"[Nobody’s here, but then again, who would be?]",
 		"end"
 	]
 });
