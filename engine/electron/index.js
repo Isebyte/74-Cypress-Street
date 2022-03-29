@@ -39,7 +39,7 @@ function createWindow () {
 
 		// If resize is disabled, the resolution chooser will show in
 		// the settings screen.
-		resizable: true,
+		resizable: false,
 
 		// Other settings
 		enableLargerThanScreen: false,

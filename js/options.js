@@ -148,7 +148,7 @@ monogatari.preferences({
 
 	// Initial resolution used for Electron, it must match the settings inside
 	// the electron.js file. This has no effect on web deployed novels.
-	'Resolution': '800x600',
+	'Resolution': '960x540',
 
 	// Speed at which dialog text will appear
 	'TextSpeed': 20,
