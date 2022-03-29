@@ -1,6 +1,6 @@
 {
-  "name": "my-game",
-  "productName": "My Game",
+  "name": "74-cypress-street",
+  "productName": "74 Cypress Street",
   "version": "0.1.0",
   "main": "engine/electron/index.js",
   "description": "A description of your game",

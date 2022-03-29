@@ -46,7 +46,7 @@ function initSpinner() {
 **/
 monogatari.component ('main-screen').template (() => {
     return `
-		<h1 id="title">Vend.</h1>
+		<h1 id="title">74 Cypress Street</h1>
         <main-menu></main-menu>
     `;
 });
