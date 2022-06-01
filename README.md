@@ -1,4 +1,4 @@
-# 74-Cypress-Street
+# Ghost Watch
 A Visual Novel created using Monogatari.js. 
 
 *Currently under development!*
